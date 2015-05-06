@@ -1,0 +1,19 @@
+//
+   Created by EMD-Sys7 on 4/23/15.
+
+//
+   Created by EMD-Sys7 on 4/23/15.
+html
+    head
+        meta(http-equiv='Cache-control', content='no-cache')
+        meta(http-equiv='Cache-control', content='no-store')
+        title Web App
+        script(src="./Scripts/Require.js" type="text/javascript" data-main="./main.js")
+
+    body
+        div(id="userDetails" style="display:none;")
+            span(id="username") #{user.username}
+            span(id="userId") #{user._id}
+            span(id="loginTime") #{loginTime}
+        div(id="mainView" class="container-fluid")
+

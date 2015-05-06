@@ -1,0 +1,118 @@
+<!--<div class="container-fluid">-->
+<header>
+<nav class="navbar navbar-default customNavbar">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header welcomeText">
+           <a class="navbar-brand welcomeTextColor" style="font-size:36px;">Welcome</a>
+            <a class="navbar-brand userNameDeco" id="chatUserName"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                    <a href="#" class="dropdown-toggle userMenu" data-toggle="dropdown" role="button" aria-expanded="false"></a>
+                       <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+
+                      <li class="dropdown-submenu">
+                          <a tabindex="-1" href="#">Themes</a>
+                          <ul class="dropdown-menu">
+                              <li><a tabindex="-1" id="white" href="#">Light</a></li>
+                              <li><a href="#" id="black">Dark</a></li>
+                          </ul>
+                      </li>
+                      <li class="divider"></li>
+                      <li><a id="logoutBtn" href="/Logout">Logout</a></li>
+                  </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+</header>
+<section>
+<div class="container-fluid" style="position: fixed;width:100%;height:75%;">
+    <div class="alert alert-warning offline none col-sm-6 col-lg-6 col-md-6">You can chat only when you have an active internet connection.</div>
+
+
+    <div class="col-sm-12 col-sm-offset-0 col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 online" style="margin-top: 1%;">
+
+    <div class="row">
+    <div class="control-group col-sm-8 col-lg-8 col-md-8" style="height:150%;">
+    <!--<textarea class="form-control" rows="20" id="chatMsg" readonly="true"></textarea>-->
+    <div class="col-sm-11 col-lg-11 col-md-11" id="chatMsg" style="color:aliceblue;height:50%; overflow-y:auto;overflow-x:hidden;font-family: 'Indie Flower',cursive;font-size: 23px;  padding: 25px;"></div>
+        <div id="sendData" class="col-lg-8 col-sm-8 col-md-8" style="outline:rgba(0,0,0,0);border-bottom:1px solid aliceblue;height:5%;padding:0.5%;margin-top: 3%;color:aliceblue;overflow-y: auto;" contenteditable="true" placeholder="Type your Message Here"></div>
+        <!--<input type="email" class="form-control col-md-7" id="sendData" name="email" style="margin-top: 2%;" placeholder="Chat">-->
+        <div class="col-lg-8 col-sm-8 col-md-8" style="margin-top: 1%;margin-left: -1%;">
+            <button type="button" class="btn btn-default" id="transformXML" style="margin-top: 1%;">Send</button>
+            <button type="button" class="btn btn-default" id="sendImage" style="margin-top: 1%;">Image</button>
+            <button type="button" class="btn btn-default" id="smileyBtn" style="margin-top: 1%;">Smiley</button>
+        </div>
+    </div>
+    <div class="col-sm-offset-1 col-sm-2 col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2" style="font-size: 200%;font-family: 'Bree Serif', serif;">
+    <span id="team" class="team" style=""></span><br/>
+    <span id="score" class="score"></span>
+    </div>
+    </div>
+    <div class="row" style="">
+    <div class="control-group col-lg-12 col-sm-12 col-md-12" id="msgTab" style="">
+    <div class="form-group">
+
+    </div>
+
+
+    </div>
+
+    </div>
+
+    </div>
+</div>
+<!--<div class="container col-lg-12 " style="">-->
+
+
+<!--</div>-->
+<!---->
+    <input type="file" id="browseChatImg" accept="image/*" style="display:none;" />
+    <div id="smileyIcons" style="display: none;">
+        <img src='../smileys/gentle laugh.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/><img src='../smileys/cry.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+        <img src='../smileys/rofl.png' class='col-sm-4 col-lg-4 col-md-4 smileys' />
+        <img src='../smiley2.png' class='col-sm-4 col-lg-4 col-md-4 smileys'  /><img src='../smileys/wink smile.png' class='col-sm-4 col-lg-4 col-md-4 smileys'  />
+        <img src='../smileys/stare.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/><img src='../smileys/kiss.png' class='col-sm-4 col-lg-4 col-md-4 smileys' /><img src='../smileys/glass smile.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+        <img src='../smileys/smile3.png' class='col-sm-4 col-lg-4 col-md-4 smileys' />
+        <img src='../smileys/smile2.png' class='col-sm-4 col-lg-4 col-md-4 smileys'  /><img src='../smileys/angelring.png' class='col-sm-4 col-lg-4 col-md-4 smileys'  />
+        <img src='../smileys/sleep.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/><img src='../smileys/know Laugh.png' class='col-sm-4 col-lg-4 col-md-4 smileys'  />
+        <img src='../smileys/glass smile 2.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/><img src='../smileys/shut.png' class='col-sm-4 col-lg-4 col-md-4 smileys' /><img src='../smileys/success.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+        <img src='../smileys/dream.png' class='col-sm-4 col-lg-4 col-md-4 smileys' />
+        <img src='../smileys/idea.png' class='col-sm-4 col-lg-4 col-md-4 smileys'  /><img src='../smileys/giggle.png' class='col-sm-4 col-lg-4 col-md-4 smileys'  />
+        <img src='../smileys/dontknow.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+        <img src='../smileys/think1.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+        <img src='../smileys/smile.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+        <img src='../smileys/wink success.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+        <img src='../smileys/anger.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>  <img src='../smileys/laugh.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/><img src='../smileys/sad.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+        <img src='../smileys/anger2.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>  <img src='../smileys/devil.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/><img src='../smileys/pamper.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+        <img src='../smileys/shame.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>  <img src='../smileys/shame2.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/><img src='../smileys/shock.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+        <img src='../smileys/smileHorn.png' class='col-sm-4 col-lg-4 col-md-4 smileys'/>
+    </div>
+
+
+</section>
+<footer>
+        <div class="col-sm-2 col-lg-2 col-md-2" style="position: absolute;bottom: 0px;color:aliceblue;font-weight: bold;"><span>Devloped by A.ARUN VIGNESH</span></div>
+        <div class="col-md-2 col-sm-2 col-lg-2 pull-right" style="position: absolute;bottom: 0px;right: 0px;">
+            <div class="panel panel-default" style="position: relative;">
+                <div class="panel-heading clearfix" style="">
+                    <span style="color: #000000;">Friends Online</span>
+                    <span class="badge pull-right"><span  id="onlineCount" style="color:white;"></span></span>
+                </div>
+                <div class="panel-body" id="chatOnline" style="color: red;display:none;height:300px;overflow-y:scroll; ">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!--</div>-->
+<!--</div>-->

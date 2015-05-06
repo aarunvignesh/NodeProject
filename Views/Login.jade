@@ -1,0 +1,71 @@
+//
+   Created by EMD-Sys7 on 4/23/15.
+html
+ head
+    title Web APP
+    meta(http-equiv='Cache-control', content='no-cache')
+    meta(http-equiv='Cache-control', content='no-store')
+    script(type="text/javascript" src="Scripts/jquery-2.1.1.js")
+    link(rel="stylesheet" type="text/css" href="Scripts/bootstrap-3.3.2-dist/css/bootstrap.css")
+    link(rel="stylesheet" type="text/css" href="Scripts/bootstrap-3.3.2-dist/css/bootstrap-theme.css")
+    script.
+        $(document).ready(function(){
+        $("#signup").click(function(){
+        $("#loginForm").fadeOut(500,function(){
+         $("#signupForm").fadeIn(500);
+        });
+        });
+        $("#signin").click(function(){
+        $("#signupForm").fadeOut(500,function(){
+         $("#loginForm").fadeIn(500);
+        });
+        });
+        });
+
+
+
+ body()
+       div(class="col-sm-12 col-md-12 col-lg-12" style="background-image:url(./open_mic.jpg);background-size:115% 120%;background-repeat:no-repeat;background-position:center;")
+         div(class="col-sm-3 col-md-3 col-lg-3" style="background-color:rgba(65, 39, 39, 0.6);height:100%;")
+           div(id="loginForm" class="col-sm-12 col-md-12  col-lg-12  centered wrapper" style="margin-top:70%;")
+               form(action="/checkLogin" method="post" class="form-signin")
+                   fieldset(style="font-size:19px;")
+                       legend(style="color:silver;") Sign In
+                       .wrapper
+                           .form-group
+                               input(name="username" type="email" id="email" class="col-sm-12 col-md-12 col-lg-12 form-control input-lg" style="color: rgb(231, 230, 171);border-radius:0px;border: 1px solid rgba(0, 0, 0,0.25);background-color:rgba(0, 0, 0,0.15);" placeholder="Email Id" required)
+                       .wrapper(style="padding-top:20%;")
+                           .form-group()
+                               input(name="password" type="password" id="password" class="col-sm-12 col-md-12 col-lg-12 form-control input-lg" style="color: rgb(231, 230, 171);border-radius:0px;border: 1px solid rgba(0, 0, 0,0.25);background-color:rgba(0, 0, 0,0.15);" placeholder="Password" required)
+                       .wrapper(style="padding-top:20%;")
+                           input(type="submit" value="Login" class="btn btn-default" style="")
+                       .wrapper
+                           p(style="margin-top:2%;color:silver;") Need an account?
+                               a(id="signup" style="margin-left:1%;color:gold;") Signup
+                           if message && message.length>0
+                               div(class="alert alert-danger") #{message}
+           div(id="signupForm" class="col-sm-12 col-md-12 col-lg-12 centered wrapper" style="display:none;margin-top:50%;")
+                        form(action="/Login" method="post" class="form-signin")
+                           fieldset(style="font-size:19px;")
+                               legend(style="color:silver;") Sign Up
+                               .wrapper
+                                    .form-group
+                                        input(name="username" type="email" id="email" style="color: rgb(231, 230, 171);border-radius:0px;border: 1px solid rgba(0, 0, 0,0.25);background-color:rgba(0, 0, 0,0.15);" class="col-sm-12 col-md-12 col-lg-12 form-control input-lg" placeholder="Email Id" required)
+                               .wrapper(style="padding-top:20%;")
+                                    .form-group()
+                                        input(name="password" type="password" id="password" style="color: rgb(231, 230, 171);border-radius:0px;border: 1px solid rgba(0, 0, 0,0.25);background-color:rgba(0, 0, 0,0.15);" class="col-sm-12 col-md-12 col-lg-12 form-control input-lg" placeholder="Password" required)
+                               .wrapper(style="padding-top:15%;")
+                                    .form-group(id="CNFpasswordDiv")
+                                        input(name="CNFpassword" type="password" id="CNFpassword" style="color: rgb(231, 230, 171);border-radius:0px;border: 1px solid rgba(0, 0, 0,0.25);background-color:rgba(0, 0, 0,0.15);" class="col-sm-12 col-md-12 col-lg-12 form-control input-lg" placeholder="Confirm Password")
+                               .wrapper(style="padding-top:15%;")
+                                    input(type="submit" value="Login" class="btn btn-default" style="")
+                               .wrapper
+
+                                    p(style="margin-top:2%;color:silver;") Already have an account?
+                                        a(id="signin" style="margin-left:1%;color:gold;") Sign In
+                                    if message && message.length>0
+                                        div(class="alert alert-danger") #{message}
+
+
+
+

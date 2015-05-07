@@ -13,7 +13,7 @@ var mongoose=require('mongoose');
 var flash=require('connect-flash');
 //var customSocket=require('./Shared/socketSetup.js');
 var customSocket=require('./Shared/Socket/mainSocket.js');
-//mongoose.connect("mongodb://127.0.0.1:27017/WebApp");
+//mongoose.connect("mongodb://127.0.0.1:27017/WebApp");db access
 
 app.use(body.urlencoded());
 app.use(body.json());

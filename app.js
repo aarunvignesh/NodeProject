@@ -55,5 +55,5 @@ app.all('*', function (req, res, next) {
     else
         res.redirect('/');
 });
-var server=app.listen(5000);
+var server=app.listen(process.env.PORT||1272);
 customSocket.create(server);

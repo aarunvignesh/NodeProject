@@ -11,9 +11,11 @@ module.exports=function(){
             header:{"Content-type":"application/json","Accept":"application/json"}
         };
         restler.get('http://cricscore-api.appspot.com/csa',options).once('complete',function(data,res){
-            if(res.rawEncoded){
-                mainSocket.sockets.emit("cricScore",res.rawEncoded);
-            }
+		if(res){
+				if(res.rawEncoded){
+					mainSocket.sockets.emit("cricScore",res.rawEncoded);
+				}
+			}
         });
     },5000);
 };
